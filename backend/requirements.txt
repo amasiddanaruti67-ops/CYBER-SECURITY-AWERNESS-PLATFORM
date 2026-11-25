@@ -1,0 +1,5 @@
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+python-multipart>=0.0.9
+# Optional richer Android binary-XML parser; the service falls back to safe XML/ZIP inspection.
+androguard>=4.1.3
