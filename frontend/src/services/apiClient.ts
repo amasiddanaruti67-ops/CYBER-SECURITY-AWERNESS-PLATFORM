@@ -1,10 +1,8 @@
 import { apkProfiles, phishingScenarios, mockUrlAnalysis } from "../data/mockData";
 import type { ApkAnalysisResponse, ApkProfile, PhishingScenario, SimulationEvent, UrlAnalysis } from "../types/cyber";
 
-const API_BASE = "http://localhost:8000";
-
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(`${API_BASE}${path}`, init);
+  const response = await fetch(path, init);
   if (!response.ok) {
     throw new Error(`API request failed (${response.status})`);
   }
